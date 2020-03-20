@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class KeyInputView {
+class Passcode {
     var code : String = ""
     var hasText: Bool { return false }
     func insertText(_ text: String) {

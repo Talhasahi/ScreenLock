@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BC8172FC2420FA7400CD5FBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8172FB2420FA7400CD5FBE /* AppDelegate.swift */; };
 		BC8172FE2420FA7400CD5FBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8172FD2420FA7400CD5FBE /* SceneDelegate.swift */; };
-		BC8173002420FA7400CD5FBE /* UIInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8172FF2420FA7400CD5FBE /* UIInputViewController.swift */; };
+		BC8173002420FA7400CD5FBE /* LockScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8172FF2420FA7400CD5FBE /* LockScreenViewController.swift */; };
 		BC8173032420FA7400CD5FBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8173012420FA7400CD5FBE /* Main.storyboard */; };
 		BC8173062420FA7400CD5FBE /* ScreenLock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC8173042420FA7400CD5FBE /* ScreenLock.xcdatamodeld */; };
 		BC8173082420FA7500CD5FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8173072420FA7500CD5FBE /* Assets.xcassets */; };
@@ -21,7 +21,7 @@
 		BC8172F82420FA7400CD5FBE /* ScreenLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8172FB2420FA7400CD5FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8172FD2420FA7400CD5FBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC8172FF2420FA7400CD5FBE /* UIInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInputViewController.swift; sourceTree = "<group>"; };
+		BC8172FF2420FA7400CD5FBE /* LockScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenViewController.swift; sourceTree = "<group>"; };
 		BC8173022420FA7400CD5FBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC8173052420FA7400CD5FBE /* ScreenLock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScreenLock.xcdatamodel; sourceTree = "<group>"; };
 		BC8173072420FA7500CD5FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,13 +62,13 @@
 			children = (
 				BC8172FB2420FA7400CD5FBE /* AppDelegate.swift */,
 				BC8172FD2420FA7400CD5FBE /* SceneDelegate.swift */,
-				BC8172FF2420FA7400CD5FBE /* UIInputViewController.swift */,
+				BC8172FF2420FA7400CD5FBE /* LockScreenViewController.swift */,
+				BC8173122420FCCB00CD5FBE /* Passcode.swift */,
 				BC8173012420FA7400CD5FBE /* Main.storyboard */,
 				BC8173072420FA7500CD5FBE /* Assets.xcassets */,
 				BC8173092420FA7500CD5FBE /* LaunchScreen.storyboard */,
 				BC81730C2420FA7500CD5FBE /* Info.plist */,
 				BC8173042420FA7400CD5FBE /* ScreenLock.xcdatamodeld */,
-				BC8173122420FCCB00CD5FBE /* Passcode.swift */,
 			);
 			path = ScreenLock;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 			files = (
 				BC8173062420FA7400CD5FBE /* ScreenLock.xcdatamodeld in Sources */,
 				BC8173132420FCCB00CD5FBE /* Passcode.swift in Sources */,
-				BC8173002420FA7400CD5FBE /* UIInputViewController.swift in Sources */,
+				BC8173002420FA7400CD5FBE /* LockScreenViewController.swift in Sources */,
 				BC8172FC2420FA7400CD5FBE /* AppDelegate.swift in Sources */,
 				BC8172FE2420FA7400CD5FBE /* SceneDelegate.swift in Sources */,
 			);

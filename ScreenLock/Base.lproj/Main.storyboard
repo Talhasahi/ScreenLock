@@ -1,57 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Input View Controller-->
+        <!--Lock Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="UIInputViewController" customModule="ScreenLock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LockScreenViewController" customModule="ScreenLock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M6L-Ve-sH4">
-                                <rect key="frame" x="40" y="187" width="334" height="50"/>
+                                <rect key="frame" x="70" y="143" width="460" height="35"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvE-mH-jwE">
-                                        <rect key="frame" x="0.0" y="0.0" width="47.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="35"/>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yd-Uz-l7N">
-                                        <rect key="frame" x="57.5" y="0.0" width="47" height="50"/>
+                                        <rect key="frame" x="78.5" y="0.0" width="68" height="35"/>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhi-Lf-enD">
-                                        <rect key="frame" x="114.5" y="0.0" width="47.5" height="50"/>
+                                        <rect key="frame" x="156.5" y="0.0" width="68.5" height="35"/>
                                         <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfG-df-P8b">
-                                        <rect key="frame" x="172" y="0.0" width="47.5" height="50"/>
+                                        <rect key="frame" x="235" y="0.0" width="68.5" height="35"/>
                                         <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2d-3n-859">
-                                        <rect key="frame" x="229.5" y="0.0" width="47" height="50"/>
+                                        <rect key="frame" x="313.5" y="0.0" width="68" height="35"/>
                                         <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFb-DR-KEQ">
-                                        <rect key="frame" x="286.5" y="0.0" width="47.5" height="50"/>
+                                        <rect key="frame" x="391.5" y="0.0" width="68.5" height="35"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Vmh-go-4J3"/>
+                                </constraints>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mS1-Mr-R4c">
-                                <rect key="frame" x="137" y="333" width="97" height="34"/>
+                                <rect key="frame" x="137" y="71" width="283" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="search"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Passcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x90-Pb-SIo">
-                                <rect key="frame" x="80" y="74" width="254" height="31.5"/>
+                                <rect key="frame" x="80" y="30" width="440" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,14 +61,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="M6L-Ve-sH4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4r2-P3-W1t"/>
-                            <constraint firstItem="mS1-Mr-R4c" firstAttribute="top" secondItem="M6L-Ve-sH4" secondAttribute="bottom" constant="96" id="8qL-1E-9CX"/>
+                            <constraint firstItem="M6L-Ve-sH4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="4r2-P3-W1t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x90-Pb-SIo" secondAttribute="trailing" constant="80" id="9gj-u9-ecm"/>
                             <constraint firstItem="x90-Pb-SIo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="CTv-bU-k3m"/>
-                            <constraint firstItem="M6L-Ve-sH4" firstAttribute="top" secondItem="x90-Pb-SIo" secondAttribute="bottom" constant="81.5" id="DTb-Jk-fb7"/>
                             <constraint firstItem="mS1-Mr-R4c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="GBS-z3-5tP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mS1-Mr-R4c" secondAttribute="trailing" constant="180" id="Hd5-ro-oca"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M6L-Ve-sH4" secondAttribute="trailing" constant="40" id="Qo0-h5-Dap"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M6L-Ve-sH4" secondAttribute="trailing" constant="70" id="Qo0-h5-Dap"/>
+                            <constraint firstItem="M6L-Ve-sH4" firstAttribute="top" secondItem="x90-Pb-SIo" secondAttribute="bottom" constant="81.5" id="R10-D7-ffh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mS1-Mr-R4c" secondAttribute="bottom" constant="495" id="ZW3-dB-vJX"/>
                             <constraint firstItem="x90-Pb-SIo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="kzM-gL-MZB"/>
                         </constraints>
@@ -92,7 +93,7 @@
             <objects>
                 <viewController id="ICR-4R-frC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SAU-qP-yhi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="HN5-ia-ihu"/>

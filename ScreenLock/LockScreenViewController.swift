@@ -4,56 +4,43 @@
 //  Created by Talha on 17/03/2020.
 //  Copyright © 2020 Talha. All rights reserved.
 import UIKit
-class UIInputViewController: UIViewController{
+class LockScreenViewController: UIViewController{
     @IBOutlet var hiddentextFeild: UITextField!
     @IBOutlet var firstView: UIView!
-     @IBOutlet var secoundView: UIView!
-     @IBOutlet var thirdView: UIView!
+    @IBOutlet var secoundView: UIView!
+    @IBOutlet var thirdView: UIView!
     @IBOutlet var fourthView: UIView!
     @IBOutlet var fifthView: UIView!
     @IBOutlet var sixthView: UIView!
-    var obj = KeyInputView()
+    var obj = Passcode()
     override func viewDidLoad() {
         super.viewDidLoad()
-       firstView.layer.cornerRadius = 25.0
-       secoundView.layer.cornerRadius = 25.0
-        thirdView.layer.cornerRadius = 25.0
-        fourthView.layer.cornerRadius = 25.0
-        fifthView.layer.cornerRadius = 25.0
-        sixthView.layer.cornerRadius = 25.0
+        firstView.viewdesign()
+       secoundView.viewdesign()
+        thirdView.viewdesign()
+        fourthView.viewdesign()
+        fifthView.viewdesign()
+        sixthView.viewdesign()
         hiddentextFeild.isHidden = true
-        hiddentextFeild.delegate = self
-        firstView.layer.borderWidth = 3
-        firstView.layer.borderColor = UIColor.black.cgColor
-        secoundView.layer.borderWidth = 3
-        secoundView.layer.borderColor = UIColor.black.cgColor
-        thirdView.layer.borderWidth = 3
-        thirdView.layer.borderColor = UIColor.black.cgColor
-        fourthView.layer.borderWidth = 3
-        fourthView.layer.borderColor = UIColor.black.cgColor
-        fifthView.layer.borderWidth = 3
-        fifthView.layer.borderColor = UIColor.black.cgColor
-        sixthView.layer.borderWidth = 3
-        sixthView.layer.borderColor = UIColor.black.cgColor
         hiddentextFeild.delegate = self
        hiddentextFeild.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
     }
      @objc func textFieldDidChange(sender: UITextField) {
         obj.insertText(hiddentextFeild.text!)
         if obj.count() == 1 {
-            firstView.backgroundColor = .green
+            firstView.fillColor()
         }
         else if obj.count() == 2 {
-            secoundView.backgroundColor = .green
+            secoundView.fillColor()
         }
         else if obj.count() == 3 {
-            thirdView.backgroundColor = .green
+            thirdView.fillColor()
         }
         else if obj.count() == 4 {
-             fourthView.backgroundColor = .green
+            fourthView.fillColor()
         }
         else if obj.count() == 5 {
-             fifthView.backgroundColor = .green
+            fifthView.fillColor()
            
         }
         else if obj.count() == 6 {
@@ -70,23 +57,20 @@ class UIInputViewController: UIViewController{
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         DispatchQueue.main.async {
-            self.hiddentextFeild.becomeFirstResponder()
+        self.hiddentextFeild.becomeFirstResponder()
         }
     }
 }
-extension UIInputViewController : UITextFieldDelegate{
+extension LockScreenViewController : UITextFieldDelegate{
     func textFieldShouldReturn(_ textField:
         UITextField) -> Bool {
-       
         hiddentextFeild.endEditing(true)
         self.viewDidLoad()
         return true
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         //print(textField.text!)
-        
     }
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         return true
@@ -97,21 +81,21 @@ extension UIInputViewController : UITextFieldDelegate{
         if isBackSpace == -8 {
             print(obj.count())
             if obj.count() == 1 {
-                firstView.backgroundColor = .white            }
+                firstView.unFillColor()           }
             if obj.count() == 2 {
-                secoundView.backgroundColor = .white
+                secoundView.unFillColor()
                        }
             if obj.count() == 3 {
-                thirdView.backgroundColor = .white
+                thirdView.unFillColor()
                        }
             if obj.count() == 4 {
-                           fourthView.backgroundColor = .white
+                fourthView.unFillColor()
                                   }
             if obj.count() == 5 {
-                           fifthView.backgroundColor = .white
+                fifthView.unFillColor()
                                   }
             if obj.count() == 6 {
-                           sixthView.backgroundColor = .white
+                sixthView.unFillColor()
                                   }
             print("backpressed")
            // print(obj.count())
@@ -121,8 +105,22 @@ extension UIInputViewController : UITextFieldDelegate{
            let maxLength = 6
         let currentString: NSString = hiddentextFeild?.text as! NSString
               let newString: NSString =
-                currentString.replacingCharacters(in: range, with: string) as NSString
+              currentString.replacingCharacters(in: range, with: string) as NSString
               return newString.length <= maxLength
         }
 }
+extension UIView{
+    func viewdesign()  {
+        self.layer.cornerRadius = 18.0
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.black.cgColor
+    }
+    func fillColor(){
+        self.backgroundColor = .green
 
+    }
+    func unFillColor(){
+        self.backgroundColor = .white
+
+    }
+}
