@@ -15,7 +15,9 @@ class Passcode {
         code =  text
     }
     func deleteBackward() {
-            code.removeLast()
+        if code.count != 0 {
+             code.removeLast()
+        }
     }
     func count() -> Int{
         return code.count 

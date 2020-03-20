@@ -44,13 +44,35 @@ class LockScreenViewController: UIViewController{
            
         }
         else if obj.count() == 6 {
-             sixthView.backgroundColor = .green
+            sixthView.fillColor()
             if obj.code == "123456"{
                 performSegue(withIdentifier: "goToNext", sender: self)
             }
             else{
                 print("Wrong Password")
+                firstView.animationShake()
+                secoundView.animationShake()
+                thirdView.animationShake()
+                fourthView.animationShake()
+                fifthView.animationShake()
+                sixthView.animationShake()
+                firstView.redColor()
+                secoundView.redColor()
+                thirdView.redColor()
+                fourthView.redColor()
+                fifthView.redColor()
+                sixthView.redColor()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+                    self.firstView.unFillColor()
+                    self.secoundView.unFillColor()
+                    self.thirdView.unFillColor()
+                    self.fourthView.unFillColor()
+                    self.fifthView.unFillColor()
+                    self.sixthView.unFillColor()
+                    self.hiddentextFeild.text! = ""
+                }
             }
+          
         }
         
         print(obj.code)
@@ -122,5 +144,17 @@ extension UIView{
     func unFillColor(){
         self.backgroundColor = .white
 
+    }
+    func animationShake(){
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.06
+        animation.repeatCount = 8
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - 10, y: self.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 10, y: self.center.y))
+        self.layer.add(animation, forKey: "position")
+    }
+    func redColor(){
+        self.backgroundColor = .red
     }
 }
