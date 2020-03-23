@@ -1,10 +1,11 @@
-//
+
 //  ViewController.swift
 //  ScreenLock
 //  Created by Talha on 17/03/2020.
 //  Copyright © 2020 Talha. All rights reserved.
 import UIKit
 class LockScreenViewController: UIViewController{
+    @IBOutlet var mainView: UIView!
     @IBOutlet var hiddentextFeild: UITextField!
     @IBOutlet var firstView: UIView!
     @IBOutlet var secoundView: UIView!
@@ -41,28 +42,22 @@ class LockScreenViewController: UIViewController{
         }
         else if obj.count() == 5 {
             fifthView.fillColor()
-           
         }
         else if obj.count() == 6 {
             sixthView.fillColor()
             if obj.code == "123456"{
-                performSegue(withIdentifier: "goToNext", sender: self)
+                print("Right password")
             }
             else{
                 print("Wrong Password")
-                firstView.animationShake()
-                secoundView.animationShake()
-                thirdView.animationShake()
-                fourthView.animationShake()
-                fifthView.animationShake()
-                sixthView.animationShake()
+                mainView.animationShake()
                 firstView.redColor()
                 secoundView.redColor()
                 thirdView.redColor()
                 fourthView.redColor()
                 fifthView.redColor()
                 sixthView.redColor()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
                     self.firstView.unFillColor()
                     self.secoundView.unFillColor()
                     self.thirdView.unFillColor()
@@ -133,8 +128,9 @@ extension LockScreenViewController : UITextFieldDelegate{
 }
 extension UIView{
     func viewdesign()  {
-        self.layer.cornerRadius = 18.0
-        self.layer.borderWidth = 1
+         self.layer.cornerRadius = self.frame.size.width/2
+         self.clipsToBounds = true
+        self.layer.borderWidth = 1.5
         self.layer.borderColor = UIColor.black.cgColor
     }
     func fillColor(){
